@@ -141,21 +141,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Sıkça Sorulan Sorular (FAQ) Akordiyonu (Ana Sayfa + Tüm Alt Sayfalar)
-  const faqItems = document.querySelectorAll('.faq-card, .faq-item');
-  faqItems.forEach(card => {
-    const trigger = card.querySelector('.faq-trigger, .faq-question');
-    if (trigger) {
-      trigger.addEventListener('click', () => {
-        const isOpen = card.classList.contains('active');
-        const parentWrap = card.closest('.faq-wrapper, .faq-wrap');
-        if (parentWrap) {
-          parentWrap.querySelectorAll('.faq-card, .faq-item').forEach(c => c.classList.remove('active'));
-        }
-        if (!isOpen) {
-          card.classList.add('active');
-        }
+  // 7. Sıkça Sorulan Sorular (FAQ) Akordiyonu (Açma & Kapatma / Toggle - Tüm Sayfalar)
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('.faq-trigger, .faq-question');
+    if (!trigger) return;
+    
+    e.preventDefault();
+    const card = trigger.closest('.faq-card, .faq-item');
+    if (!card) return;
+
+    const isOpen = card.classList.contains('active');
+    const parentWrap = card.closest('.faq-wrapper, .faq-wrap, .faq-grid') || card.parentElement;
+
+    // Aynı gruptaki diğer açık soruları kapat
+    if (parentWrap) {
+      parentWrap.querySelectorAll('.faq-card.active, .faq-item.active').forEach(c => {
+        if (c !== card) c.classList.remove('active');
       });
+    }
+
+    // Tıklanan soruyu aç / kapat (Toggle)
+    if (isOpen) {
+      card.classList.remove('active');
+    } else {
+      card.classList.add('active');
     }
   });
 

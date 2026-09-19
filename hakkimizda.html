@@ -289,7 +289,7 @@
   </section>
 
   <!-- Canlı Konum & 7/24 İletişim -->
-  <section class="section section-dark" id="harita-iletisim">
+  <section class="section" id="harita-iletisim" style="background: var(--bg-light); border-top: 1px solid var(--border-light);">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Canlı Konum & İletişim</span>
@@ -298,57 +298,67 @@
       </div>
 
       <div class="map-contact-grid">
-        <div class="map-embed-box">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120365.4055276356!2d29.051213459143666!3d41.025345778272535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac89a695dfd05%3A0x280e729a8a7db9d1!2zw5xtcmFuaXllL8Swc3RhbmJ1bA!5e0!3m2!1str!2str!4v1710000000000!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Ümraniye ve Çevre İlçeler Kapsama Haritası"></iframe>
-        </div>
-
-        <div class="contact-details-box">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 8px;">
-            <h3 style="font-size: 1.3rem; font-weight: 800; color: #ffffff; margin: 0;">7/24 Acil Operasyon Merkezi</h3>
-            <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); padding: 4px 10px; border-radius: 9999px; font-size: 0.78rem; font-weight: 800;">
-              <span class="status-live-dot"></span> Canlı Nöbetçi
+        <div class="map-embed-box" style="display: flex; flex-direction: column; min-height: 460px; background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px -6px rgba(15, 23, 42, 0.08);">
+          <div style="background: #f8fafc; padding: 14px 18px; border-bottom: 1px solid var(--border-light); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <span style="font-weight: 800; font-size: 0.95rem; color: #0f172a; display: flex; align-items: center; gap: 8px;">
+              <span class="status-live-dot"></span> Ümraniye Merkez & Nöbetçi Konumumuz
+            </span>
+            <span style="font-size: 0.78rem; background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3); padding: 4px 10px; border-radius: 9999px; font-weight: 800;">
+              Canlı GPS Lokasyonu
             </span>
           </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120365.4055276356!2d29.051213459143666!3d41.025345778272535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac89a695dfd05%3A0x280e729a8a7db9d1!2zw5xtcmFuaXllL8Swc3RhbmJ1bA!5e0!3m2!1str!2str!4v1710000000000!5m2!1str!2str" width="100%" height="100%" style="border:0; flex: 1; min-height: 400px; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Ümraniye ve Çevre İlçeler Kapsama Haritası"></iframe>
+        </div>
 
-          <div class="contact-item-row">
-            <div class="contact-item-icon">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+        <div class="contact-details-box" style="background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 20px; padding: 28px; box-shadow: 0 10px 30px -6px rgba(15, 23, 42, 0.08); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 8px;">
+              <h3 style="font-size: 1.3rem; font-weight: 800; color: #0f172a; margin: 0;">7/24 Acil Operasyon Merkezi</h3>
+              <span style="display: inline-flex; align-items: center; gap: 6px; background: #ecfdf5; color: #059669; border: 1px solid rgba(16, 185, 129, 0.3); padding: 4px 10px; border-radius: 9999px; font-size: 0.78rem; font-weight: 800;">
+                <span class="status-live-dot"></span> Canlı Nöbetçi
+              </span>
             </div>
-            <div>
-              <div class="contact-item-title">7/24 Acil Çağrı Hattı</div>
-              <div class="contact-item-value">
-                <a href="tel:05441380734" style="color: #ff5500; font-size: 1.25rem;">0544 138 07 34</a>
+
+            <div class="contact-item-row" style="border-bottom: 1px solid #f1f5f9; padding: 14px 0;">
+              <div class="contact-item-icon" style="width: 44px; height: 44px; border-radius: 12px; background: rgba(255, 85, 0, 0.12); color: #ff5500; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
               </div>
-              <small style="color: #94a3b8;">Ortalama yanıt süresi: 3 saniye</small>
+              <div>
+                <div class="contact-item-title" style="font-size: 0.8rem; font-weight: 800; color: #64748b; text-transform: uppercase;">7/24 Acil Çağrı Hattı</div>
+                <div class="contact-item-value">
+                  <a href="tel:05441380734" style="color: #0f172a; font-size: 1.35rem; font-weight: 900; text-decoration: none;">0544 138 07 34</a>
+                </div>
+                <small style="color: #64748b; font-size: 0.8rem;">Ortalama yanıt süresi: 3 saniye</small>
+              </div>
+            </div>
+
+            <div class="contact-item-row" style="border-bottom: 1px solid #f1f5f9; padding: 14px 0;">
+              <div class="contact-item-icon" style="width: 44px; height: 44px; border-radius: 12px; background: #ecfdf5; color: #059669; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 012.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.25-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
+              </div>
+              <div>
+                <div class="contact-item-title" style="font-size: 0.8rem; font-weight: 800; color: #64748b; text-transform: uppercase;">WhatsApp Canlı Konum Hattı</div>
+                <div class="contact-item-value">
+                  <a href="#" class="btn-send-location" style="color: #059669; font-size: 1.15rem; font-weight: 800;">Konum Paylaş & Fiyat Al</a>
+                </div>
+                <small style="color: #64748b; font-size: 0.8rem;">Canlı konumunuzu atın, en yakın çekici hemen yola çıksın</small>
+              </div>
+            </div>
+
+            <div class="contact-item-row" style="padding: 14px 0;">
+              <div class="contact-item-icon" style="width: 44px; height: 44px; border-radius: 12px; background: #f1f5f9; color: #475569; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+              </div>
+              <div>
+                <div class="contact-item-title" style="font-size: 0.8rem; font-weight: 800; color: #64748b; text-transform: uppercase;">Hizmet Kapsamı</div>
+                <div class="contact-item-value" style="font-size: 0.95rem; font-weight: 600; color: #334155; margin-top: 2px;">
+                  Ümraniye, Ataşehir, Çekmeköy, Sancaktepe, TEM, Şile & Kuzey Marmara Otoyolu
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="contact-item-row">
-            <div class="contact-item-icon" style="background: rgba(37, 211, 102, 0.15); color: var(--whatsapp);">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 012.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.25-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
-            </div>
-            <div>
-              <div class="contact-item-title">WhatsApp Canlı Konum Hattı</div>
-              <div class="contact-item-value">
-                <a href="#" class="btn-send-location" style="color: #25d366;">Konum Paylaş & Fiyat Al</a>
-              </div>
-              <small style="color: #94a3b8;">Canlı konumunuzu atın, en yakın çekici hemen yola çıksın</small>
-            </div>
-          </div>
-
-          <div class="contact-item-row">
-            <div class="contact-item-icon" style="background: rgba(255, 255, 255, 0.06); color: #cbd5e1;">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
-            </div>
-            <div>
-              <div class="contact-item-title">Hizmet Kapsamı</div>
-              <div class="contact-item-value" style="font-size: 0.95rem; font-weight: 600; color: #cbd5e1;">
-                Ümraniye, Ataşehir, Çekmeköy, Sancaktepe, TEM, Şile & Kuzey Marmara Otoyolu
-              </div>
-            </div>
-          </div>
-
-          <div style="display: flex; gap: 10px; margin-top: 22px; flex-wrap: wrap;">
+          <div style="display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
             <a href="tel:05441380734" class="btn btn-call btn-lg" style="flex: 1; justify-content: center;">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
               <span>Hemen Ara</span>

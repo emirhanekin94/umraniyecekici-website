@@ -94,6 +94,9 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  width: 100% !important;
 }
 
 body {
@@ -101,8 +104,16 @@ body {
   background-color: var(--bg-body);
   color: var(--text-body);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  position: relative;
   padding-bottom: 84px; /* Mobilde sabit alt dock için emniyet boşluğu */
+}
+
+main, header, footer, section {
+  max-width: 100% !important;
+  overflow-x: clip;
 }
 
 @media (min-width: 992px) {
@@ -125,8 +136,11 @@ button {
   transition: var(--transition);
 }
 
+img, iframe, video, svg, table {
+  max-width: 100% !important;
+}
+
 img {
-  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -140,6 +154,7 @@ ul, ol {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 1.25rem;
+  box-sizing: border-box;
 }
 
 /* ==========================================================================
@@ -1818,6 +1833,19 @@ section[style*="linear-gradient(135deg"] p {
   box-shadow: 0 4px 12px rgba(255, 85, 0, 0.4) !important;
 }
 
+/* Ana Sayfa Geniş Hizmet Ağı Bölge Kartları Limiti (Masaüstü 12, Mobil 4) */
+@media (max-width: 768px) {
+  .home-regions-limited .region-square-card:nth-child(n+5) {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .home-regions-limited .region-square-card:nth-child(n+13) {
+    display: none !important;
+  }
+}
+
 /* Form Elemanları (Subpages) */
 .wp-contact-form {
   display: flex;
@@ -1890,19 +1918,21 @@ select.wp-form-select-light {
   line-height: 1.6;
 }
 
-/* Blog & Görsel Figür */
+/* Blog & Hizmet Sayfaları Görsel Figür */
 .blog-featured-figure {
-  margin: 20px 0 25px;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-sm);
+  margin: 22px auto 26px !important;
+  border-radius: var(--radius-md) !important;
+  overflow: hidden !important;
+  border: 1.5px solid #cbd5e1 !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+  max-width: 700px !important;
 }
 
 .blog-featured-figure img {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 100% !important;
+  max-height: 340px !important;
+  object-fit: cover !important;
+  display: block !important;
 }
 
 .blog-featured-figure figcaption {
