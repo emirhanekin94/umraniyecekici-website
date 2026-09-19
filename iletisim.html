@@ -98,14 +98,15 @@
   </header>
 
   <!-- Sayfa Başlığı / Breadcrumb -->
-  <section style="background: var(--dark-gradient); color: #fff; padding: 50px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+  <section class="section" style="background: radial-gradient(circle at top right, rgba(255, 85, 0, 0.15) 0%, transparent 65%), #070b14; color: #ffffff; padding: 60px 0 50px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
     <div class="container">
-      <div style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 10px;">
-        <a href="index.html" style="color: #cbd5e1;">Ana Sayfa</a> / <span>İletişim</span>
+      <div style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 12px;">
+        <a href="index.html" style="color: #cbd5e1; text-decoration: none;">Ana Sayfa</a> / <span style="color: var(--primary); font-weight: 700;">İletişim</span>
       </div>
-      <h1 style="font-size: 2.3rem; font-weight: 900; margin-bottom: 8px;">İletişim & Acil Çekici Çağrı Merkezi</h1>
-      <p style="color: #cbd5e1; font-size: 1.05rem;">
-        Yolda kaldığınızda bize günün ve gecenin her saati <strong>0544 138 07 34</strong> üzerinden veya WhatsApp canlı konum paylaşımı ile ulaşabilirsiniz.
+      <span class="section-tag" style="background: rgba(255, 85, 0, 0.2); color: #ff8533; border: 1px solid rgba(255, 85, 0, 0.35); margin-bottom: 14px; display: inline-block;">7/24 Kesintisiz Çağrı Merkezi</span>
+      <h1 style="font-size: 2.4rem; font-weight: 900; margin: 10px 0 12px; line-height: 1.25; color: #ffffff;">İletişim & Acil Çekici Çağrı Merkezi</h1>
+      <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.7; max-width: 820px;">
+        Yolda kaldığınızda bize günün ve gecenin her saati <strong style="color: #ffffff;">0544 138 07 34</strong> üzerinden veya WhatsApp canlı konum paylaşımı ile doğrudan ulaşabilirsiniz.
       </p>
     </div>
   </section>
@@ -318,6 +319,22 @@
       </div>
     </div>
   </footer>
+
+  <!-- Mobil Sabit Acil Çağrı Dock (Ana Sayfadaki ile Birebir Aynı) -->
+  <div class="mobile-sticky-dock" aria-label="Acil Arama Çubuğu">
+    <div class="sticky-dock-inner">
+      <a href="tel:05441380734" class="sticky-dock-btn sticky-call-btn">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+        <span>HEMEN ARA</span>
+      </a>
+      <a href="#" class="sticky-dock-btn sticky-whatsapp-btn btn-send-location">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 012.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.25-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
+        <span>KONUM AT</span>
+      </a>
+    </div>
+  </div>
+
+  
 
   
   <!-- Sağ Altta Sabit, Göze Çarpan, İri Boyutlu Acil Aksiyon Butonları (Vektör SVG) -->

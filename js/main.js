@@ -93,7 +93,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. Bölge Filtreleme Sekmeleri
+  // 5. Bölge Listesini Genişletme / Daraltma (Ana Sayfa 12/24 Bölge Toggle)
+  const toggleAllRegionsBtn = document.getElementById('btn-toggle-all-regions');
+  const regionsContainer = document.getElementById('regions-container');
+
+  if (toggleAllRegionsBtn && regionsContainer) {
+    toggleAllRegionsBtn.addEventListener('click', () => {
+      const isExpanded = regionsContainer.classList.toggle('is-expanded');
+      toggleAllRegionsBtn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+      const icon = toggleAllRegionsBtn.querySelector('.toggle-icon');
+      const text = toggleAllRegionsBtn.querySelector('.toggle-text');
+      if (isExpanded) {
+        if (icon) icon.textContent = '▲';
+        if (text) text.textContent = 'Daha Az Bölge Göster';
+      } else {
+        if (icon) icon.textContent = '▼';
+        if (text) text.textContent = 'Kalan Tüm Bölgeleri Aç (+12 Bölge)';
+        // Kullanıcı daralttığında yumuşakça bölgeler başlığına kaydır
+        const sectionHeader = document.querySelector('#hizmet-bolgelerimiz .section-header');
+        if (sectionHeader) {
+          sectionHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  }
+
+  // 5b. Bölge Filtreleme Sekmeleri
   const regionTabs = document.querySelectorAll('.region-filter-tabs .filter-tab-btn, .filter-tabs-wrap .filter-tab-btn, .region-tab-btn');
   const regionCards = document.querySelectorAll('.region-square-card, .region-card-luxury, .region-card');
 
@@ -104,6 +129,22 @@ document.addEventListener('DOMContentLoaded', () => {
         tab.classList.add('active');
 
         const filterVal = tab.getAttribute('data-filter') || tab.getAttribute('data-category');
+
+        // Eğer belirli bir kategori seçildiyse konteyneri genişlet ve toggle butonunu gizle; tümü seçildiyse butonu göster
+        if (regionsContainer) {
+          if (filterVal !== 'all') {
+            regionsContainer.classList.add('is-expanded');
+            if (toggleAllRegionsBtn) toggleAllRegionsBtn.style.display = 'none';
+          } else {
+            if (toggleAllRegionsBtn) {
+              toggleAllRegionsBtn.style.display = '';
+              const wasExpanded = toggleAllRegionsBtn.getAttribute('aria-expanded') === 'true';
+              if (!wasExpanded) {
+                regionsContainer.classList.remove('is-expanded');
+              }
+            }
+          }
+        }
 
         regionCards.forEach(card => {
           const category = card.getAttribute('data-category') || '';
@@ -132,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryItems.forEach(item => {
           const cat = item.getAttribute('data-category') || '';
           if (filterVal === 'all' || cat === filterVal || cat.split(' ').includes(filterVal)) {
-            item.style.display = 'flex';
+            item.style.display = '';
           } else {
             item.style.display = 'none';
           }
