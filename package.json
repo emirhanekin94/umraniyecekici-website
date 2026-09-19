@@ -1,0 +1,23 @@
+{
+  "name": "umraniyeyolyardim",
+  "version": "1.0.0",
+  "description": "Ümraniye Yol Yardım - 7/24 En Yakın Oto Çekici ve Kurtarma",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx -y serve .",
+    "dev": "npx -y serve .",
+    "optimize-images": "node scripts/optimize-images.js"
+  },
+  "keywords": [
+    "oto-cekici",
+    "oto-kurtarma",
+    "yol-yardim",
+    "umraniye-cekici",
+    "umraniye-oto-cekici"
+  ],
+  "author": "Ümraniye Yol Yardım",
+  "license": "ISC",
+  "devDependencies": {
+    "sharp": "^0.35.4"
+  }
+}
