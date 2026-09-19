@@ -158,4 +158,49 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  // 8. Galeri Lightbox Büyütme Modalı (galeri.html)
+  const lightbox = document.getElementById('gallery-lightbox');
+  if (lightbox) {
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxDesc = document.getElementById('lightbox-desc');
+    const closeBtn = lightbox.querySelector('.lightbox-close-btn');
+
+    document.querySelectorAll('.gallery-item, .photo-slot-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        // Eğer kart içindeki doğrudan telefon/whatsapp linkine basıldıysa lightbox açma
+        if (e.target.closest('a')) return;
+
+        const src = card.getAttribute('data-lightbox-src') || card.querySelector('img')?.src;
+        const title = card.getAttribute('data-lightbox-title') || card.querySelector('img')?.title || card.querySelector('.photo-caption-title')?.textContent;
+        const desc = card.getAttribute('data-lightbox-desc') || card.querySelector('.photo-caption-desc')?.textContent;
+
+        if (src && lightboxImg) {
+          lightboxImg.src = src;
+          if (lightboxTitle && title) lightboxTitle.textContent = title;
+          if (lightboxDesc && desc) lightboxDesc.textContent = desc;
+          lightbox.classList.add('active');
+          lightbox.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('active');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    };
+
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  }
 });
