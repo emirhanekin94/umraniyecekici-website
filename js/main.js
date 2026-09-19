@@ -6,7 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const PHONE_NUMBER = '905441380734';
 
-  // 1. Mobil Menü Aç/Kapat (Tüm sayfalarda .main-nav ve .menu-toggle-btn desteklenir)
+  // 1. Mobil Menü Aç/Kapat (Ana sayfa ve tüm alt sayfalarda çalışır)
   const menuBtn = document.querySelector('.menu-toggle-btn');
   const mainNav = document.querySelector('.main-nav');
   const mobileDrawer = document.querySelector('.mobile-nav-drawer');
@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (mobileDrawer) mobileDrawer.classList.toggle('active');
     });
 
-    // Menü linklerine tıklandığında menüyü kapat
     const closeMenu = () => {
       menuBtn.classList.remove('active');
       menuBtn.setAttribute('aria-expanded', 'false');
@@ -36,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileDrawer.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
     }
 
-    // Dışarı tıklandığında menüyü kapat
     document.addEventListener('click', (e) => {
       const isNavActive = (mainNav && mainNav.classList.contains('active')) || 
                           (mobileDrawer && mobileDrawer.classList.contains('active'));
@@ -48,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. WhatsApp Mesajı Gönderme Yardımcısı (iOS / Android / Masaüstü)
+  // 2. WhatsApp Yönlendirme Motoru (Safari / iOS / Android Tam Uyumlu)
   window.sendWhatsAppMessage = function(text) {
     const encodedText = encodeURIComponent(text);
     const url = `https://api.whatsapp.com/send?phone=${PHONE_NUMBER}&text=${encodedText}`;
@@ -66,34 +64,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // 3. Hızlı Çağrı / Fiyat Teklifi Formu
-  const dispatchForm = document.getElementById('dispatch-quote-form') || document.getElementById('hero-quote-form');
-  if (dispatchForm) {
-    dispatchForm.addEventListener('submit', (e) => {
+  // 3. Teklif & Çağrı Formları (Ana sayfa + Tüm Bölge ve Hizmet Alt Sayfalarındaki Formlar)
+  document.querySelectorAll('form#dispatch-quote-form, form#hero-quote-form, form.wp-contact-form').forEach(form => {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const region = document.getElementById('dispatch-region')?.value || 
-                     document.getElementById('hero-region-select')?.value || 'Ümraniye';
-      const vehicle = document.getElementById('dispatch-vehicle')?.value || 
-                      document.getElementById('hero-vehicle-select')?.value || 'Binek Otomobil';
-      const problem = document.getElementById('dispatch-problem')?.value || 
-                      document.getElementById('hero-problem-select')?.value || 'Arıza / Yürümüyor';
 
-      const message = `Merhaba Ümraniye Yol Yardım,\nAcil oto çekiciye ihtiyacım var:\n\n📍 Bulunduğum Bölge: ${region}\n🚗 Araç Türü: ${vehicle}\n⚠️ Durum / Problem: ${problem}\n\nEn yakın çekicinizi yönlendirip fiyat iletebilir misiniz? Konumumu iletiyorum:`;
+      const region = form.querySelector('[name="region_select"], #dispatch-region, #hero-region-select')?.value || 'Ümraniye';
+      const vehicle = form.querySelector('[name="vehicle_type_select"], #dispatch-vehicle, #hero-vehicle-select')?.value || 'Binek Otomobil';
+      const problem = form.querySelector('[name="problem_select"], #dispatch-problem, #hero-problem-select')?.value || 'Arıza / Yürümüyor';
+      const toLocation = form.querySelector('[name="to_location"]')?.value || '';
+      const userPhone = form.querySelector('[name="user_phone"]')?.value || '';
 
-      window.sendWhatsAppMessage(message);
-    });
-  }
+      let message = `Merhaba Ümraniye Yol Yardım,\nAcil oto çekiciye ihtiyacım var:\n\n📍 Bulunduğum Bölge: ${region}\n🚗 Araç Türü: ${vehicle}\n⚠️ Durum / Problem: ${problem}`;
+      if (toLocation) message += `\n🎯 Bırakılacak Yer: ${toLocation}`;
+      if (userPhone) message += `\n📞 İletişim Tel: ${userPhone}`;
+      message += `\n\nEn yakın oto çekicinizi yönlendirip net fiyat iletebilir misiniz? Konumumu paylaşıyorum:`;
 
-  // 4. Doğrudan WhatsApp Konum Gönderme Butonları
-  document.querySelectorAll('.btn-send-location').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const message = 'Merhaba Ümraniye Yol Yardım, yolda kaldım. Bulunduğum konuma en yakın oto çekiciyi yönlendirir misiniz? Konumumu paylaşıyorum:';
       window.sendWhatsAppMessage(message);
     });
   });
 
-  // 5. Bölgeler Filtre Sekmeleri (Hem index.html hem bolgeler/index.html ile tam uyumlu)
+  // 4. Doğrudan WhatsApp Canlı Konum Gönderme Butonları
+  document.querySelectorAll('.btn-send-location, .sticky-btn-whatsapp').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const message = 'Merhaba Ümraniye Yol Yardım, yolda kaldım. Bulunduğum konuma en yakın oto çekici aracınızı yönlendirir misiniz? Konumumu iletiyorum:';
+      window.sendWhatsAppMessage(message);
+    });
+  });
+
+  // 5. Bölge Filtreleme Sekmeleri
   const regionTabs = document.querySelectorAll('.region-filter-tabs .filter-tab-btn, .filter-tabs-wrap .filter-tab-btn, .region-tab-btn');
   const regionCards = document.querySelectorAll('.region-square-card, .region-card-luxury, .region-card');
 
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Galeri Filtre Sekmeleri (galeri.html ile tam uyumlu)
+  // 6. Galeri Filtre Sekmeleri
   const galleryTabs = document.querySelectorAll('[data-gallery-filter]');
   const galleryItems = document.querySelectorAll('.gallery-item, .photo-slot-card');
 
@@ -141,14 +141,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Sıkça Sorulan Sorular (FAQ) Akordiyonu
+  // 7. Sıkça Sorulan Sorular (FAQ) Akordiyonu (Ana Sayfa + Tüm Alt Sayfalar)
   const faqItems = document.querySelectorAll('.faq-card, .faq-item');
   faqItems.forEach(card => {
     const trigger = card.querySelector('.faq-trigger, .faq-question');
     if (trigger) {
       trigger.addEventListener('click', () => {
         const isOpen = card.classList.contains('active');
-        faqItems.forEach(c => c.classList.remove('active'));
+        const parentWrap = card.closest('.faq-wrapper, .faq-wrap');
+        if (parentWrap) {
+          parentWrap.querySelectorAll('.faq-card, .faq-item').forEach(c => c.classList.remove('active'));
+        }
         if (!isOpen) {
           card.classList.add('active');
         }
