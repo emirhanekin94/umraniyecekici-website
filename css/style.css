@@ -166,15 +166,15 @@ ul, ol {
 }
 
 .btn-call {
-  background: var(--emerald-gradient);
+  background: var(--primary-gradient);
   color: var(--text-white);
-  box-shadow: var(--emerald-glow);
+  box-shadow: var(--primary-glow);
 }
 
 .btn-call:hover {
-  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  background: linear-gradient(135deg, #ff3d00 0%, #c43000 100%);
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px -4px rgba(16, 185, 129, 0.55);
+  box-shadow: 0 14px 30px -4px rgba(255, 85, 0, 0.6);
 }
 
 .btn-whatsapp {
@@ -1401,8 +1401,8 @@ section[style*="linear-gradient(135deg"] p {
 .process-steps-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin: 25px 0;
+  gap: 18px;
+  margin: 30px 0;
 }
 
 @media (max-width: 900px) {
@@ -1420,45 +1420,50 @@ section[style*="linear-gradient(135deg"] p {
 }
 
 .process-step-card {
-  background: var(--bg-subtle);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
-  padding: 20px 16px;
-  text-align: center;
-  transition: var(--transition);
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 26px 20px !important;
+  text-align: center !important;
+  box-shadow: 0 4px 18px -2px rgba(15, 23, 42, 0.06) !important;
+  transition: var(--transition) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 
 .process-step-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(255, 85, 0, 0.3);
-  box-shadow: var(--shadow-sm);
+  transform: translateY(-5px) !important;
+  border-color: #ff5500 !important;
+  box-shadow: 0 16px 36px -6px rgba(255, 85, 0, 0.2) !important;
 }
 
 .process-step-num {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: var(--primary-gradient);
-  color: #ffffff;
-  font-weight: 800;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 12px;
-  box-shadow: var(--primary-glow);
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  background: var(--primary-gradient) !important;
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  font-size: 1.25rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 14px !important;
+  box-shadow: 0 8px 22px -3px rgba(255, 85, 0, 0.45) !important;
 }
 
 .process-step-title {
-  font-size: 1rem;
-  font-weight: 800;
-  color: var(--text-main);
-  margin-bottom: 6px;
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  margin-bottom: 8px !important;
 }
 
 .process-step-desc {
-  font-size: 0.84rem;
-  color: var(--text-muted);
-  line-height: 1.5;
+  font-size: 0.9rem !important;
+  color: #475569 !important;
+  line-height: 1.6 !important;
 }
 
 .table-vehicle-support {
@@ -1466,22 +1471,30 @@ section[style*="linear-gradient(135deg"] p {
   border-collapse: collapse;
   margin: 20px 0;
   font-size: 0.9rem;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   overflow: hidden;
   background: #ffffff;
-  border: 1px solid var(--border-light);
+  border: 1.5px solid #cbd5e1;
+  box-shadow: var(--shadow-sm);
 }
 
 .table-vehicle-support th, .table-vehicle-support td {
   padding: 14px 18px;
-  border: 1px solid var(--border-light);
+  border: 1px solid #e2e8f0;
   text-align: left;
 }
 
 .table-vehicle-support th {
-  background: var(--bg-subtle);
-  color: var(--text-main);
+  background: #f1f5f9;
+  color: var(--secondary);
   font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table-vehicle-support tbody tr:hover {
+  background: rgba(255, 85, 0, 0.03);
 }
 
 @media (max-width: 640px) {
@@ -1506,8 +1519,8 @@ section[style*="linear-gradient(135deg"] p {
 }
 
 .region-photo-card {
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
+  border: 1.5px solid #cbd5e1;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   background: #ffffff;
@@ -1516,275 +1529,293 @@ section[style*="linear-gradient(135deg"] p {
 
 .region-photo-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(255, 85, 0, 0.3);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(255, 85, 0, 0.4);
 }
 
-/* SSS / FAQ */
+/* SSS / FAQ - KARTLI TASARIM */
 .faq-wrap {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 15px;
+  gap: 14px;
+  margin-top: 20px;
 }
 
 .faq-item {
-  background: #ffffff;
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05) !important;
+  transition: var(--transition) !important;
+  position: relative !important;
+}
+
+.faq-item:hover {
+  border-color: rgba(255, 85, 0, 0.5) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.09) !important;
 }
 
 .faq-item.active {
-  border-color: rgba(255, 85, 0, 0.4);
-  box-shadow: var(--shadow-md);
+  border-color: #ff5500 !important;
+  border-left: 5px solid #ff5500 !important;
+  box-shadow: 0 10px 28px -4px rgba(255, 85, 0, 0.18) !important;
 }
 
 .faq-question {
-  width: 100%;
-  padding: 1.1rem 1.4rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  text-align: left;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--text-main);
-  background: transparent;
-  cursor: pointer;
+  width: 100% !important;
+  padding: 1.25rem 1.5rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+  text-align: left !important;
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  background: transparent !important;
+  cursor: pointer !important;
 }
 
 .faq-item.active .faq-question {
-  color: var(--primary);
+  color: #ff5500 !important;
 }
 
 .faq-icon {
-  flex-shrink: 0;
-  font-size: 1.25rem;
-  font-weight: 700;
-  transition: transform 0.3s ease;
-  color: var(--text-muted);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  flex-shrink: 0 !important;
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 50% !important;
+  background: #f1f5f9 !important;
+  color: #64748b !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease !important;
 }
 
 .faq-item.active .faq-icon {
-  transform: rotate(180deg);
-  color: var(--primary);
+  transform: rotate(180deg) !important;
+  background: #fff7ed !important;
+  color: #ff5500 !important;
 }
 
 .faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.35s ease, padding 0.35s ease;
-  padding: 0 1.4rem;
-  color: var(--text-body);
-  line-height: 1.6;
+  padding: 0 1.5rem;
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.7;
 }
 
 .faq-item.active .faq-answer {
   max-height: 350px;
-  padding: 0 1.4rem 1.1rem;
+  padding: 0 1.5rem 1.25rem;
 }
 
-/* Neden Biz */
+/* Neden Biz - KARTLI TASARIM */
 .why-us-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 22px;
 }
 
 @media (max-width: 860px) {
   .why-us-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 16px;
   }
 }
 
 .why-us-card {
-  background: #ffffff;
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg);
-  padding: 24px;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-  display: flex;
-  flex-direction: column;
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 20px !important;
+  padding: 28px 24px !important;
+  box-shadow: 0 6px 20px -2px rgba(15, 23, 42, 0.07) !important;
+  transition: var(--transition) !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 .why-us-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(255, 85, 0, 0.35);
+  transform: translateY(-5px) !important;
+  box-shadow: 0 16px 36px -6px rgba(15, 23, 42, 0.12) !important;
+  border-color: #ff5500 !important;
 }
 
 .why-us-icon {
-  width: 48px;
-  height: 48px;
-  background: var(--primary-subtle);
-  color: var(--primary);
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, rgba(255, 85, 0, 0.14) 0%, rgba(255, 107, 0, 0.04) 100%) !important;
+  border: 1.5px solid rgba(255, 85, 0, 0.25) !important;
+  color: #ff5500 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 18px !important;
 }
 
 .why-us-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 26px !important;
+  height: 26px !important;
 }
 
 .why-us-title {
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--text-main);
-  margin-bottom: 6px;
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  margin-bottom: 8px !important;
 }
 
 .why-us-desc {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  line-height: 1.55;
+  font-size: 0.92rem !important;
+  color: #475569 !important;
+  line-height: 1.65 !important;
 }
 
-/* Komşu Lokasyonlar Matrisi */
+/* Komşu Lokasyonlar Matrisi - KARTLI LÜKS TASARIM */
 .regions-matrix {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 18px;
+  gap: 20px;
 }
 
 @media (max-width: 600px) {
   .regions-matrix {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 14px;
   }
 }
 
 .region-card-luxury {
-  display: flex;
-  flex-direction: column;
-  background: #ffffff;
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg);
-  padding: 22px;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-  text-decoration: none;
-  color: inherit;
-  position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 18px !important;
+  padding: 24px !important;
+  box-shadow: 0 6px 20px -2px rgba(15, 23, 42, 0.07) !important;
+  transition: var(--transition) !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  position: relative !important;
+  overflow: hidden !important;
 }
 
 .region-card-luxury:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(255, 85, 0, 0.35);
+  transform: translateY(-5px) !important;
+  box-shadow: 0 16px 36px -6px rgba(255, 85, 0, 0.2) !important;
+  border-color: #ff5500 !important;
 }
 
 .region-card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 14px;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 14px !important;
 }
 
 .region-icon-badge {
-  width: 38px;
-  height: 38px;
-  border-radius: var(--radius-md);
-  background: var(--primary-light);
-  color: var(--primary);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 12px !important;
+  background: #fff7ed !important;
+  border: 1px solid rgba(255, 85, 0, 0.25) !important;
+  color: #ff5500 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .region-icon-badge svg {
-  width: 18px;
-  height: 18px;
+  width: 22px !important;
+  height: 22px !important;
 }
 
 .region-status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--emerald);
-  background: rgba(16, 185, 129, 0.1);
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  color: #059669 !important;
+  background: #ecfdf5 !important;
+  padding: 5px 12px !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
 }
 
 .status-live-dot {
-  width: 7px;
-  height: 7px;
-  background: var(--emerald);
-  border-radius: 50%;
-  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
-  animation: pulseLive 2s infinite ease-in-out;
-  display: inline-block;
-  vertical-align: middle;
+  width: 8px !important;
+  height: 8px !important;
+  background: #10b981 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 0 2.5px rgba(16, 185, 129, 0.35) !important;
+  animation: pulseLive 2s infinite ease-in-out !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
 }
 
 .region-card-name {
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--text-main);
-  margin-bottom: 6px;
-  line-height: 1.35;
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  margin-top: 10px !important;
+  margin-bottom: 6px !important;
+  line-height: 1.35 !important;
 }
 
 .region-card-sub {
-  font-size: 0.84rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-  margin-bottom: 16px;
-  flex-grow: 1;
+  font-size: 0.86rem !important;
+  color: #64748b !important;
+  line-height: 1.5 !important;
+  margin-bottom: 16px !important;
+  flex-grow: 1 !important;
 }
 
 .region-card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 12px;
-  border-top: 1px solid var(--border-light);
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-top: 14px !important;
+  border-top: 1px solid #f1f5f9 !important;
 }
 
 .region-eta-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.78rem;
-  font-weight: 800;
-  color: var(--primary);
-  background: var(--primary-light);
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  color: #ff5500 !important;
+  background: #fff7ed !important;
+  padding: 5px 12px !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(255, 85, 0, 0.2) !important;
 }
 
 .region-action-arrow {
-  width: 32px;
-  height: 32px;
-  background: var(--bg-subtle);
-  color: var(--text-muted);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
+  width: 36px !important;
+  height: 36px !important;
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: var(--transition) !important;
 }
 
 .region-card-luxury:hover .region-action-arrow {
-  background: var(--primary);
-  color: #ffffff;
-  transform: translateX(3px);
+  background: var(--primary-gradient) !important;
+  color: #ffffff !important;
+  transform: translateX(3px) !important;
+  box-shadow: 0 4px 12px rgba(255, 85, 0, 0.4) !important;
 }
 
 /* Form Elemanları (Subpages) */
@@ -2255,11 +2286,17 @@ select.wp-form-select-light {
 }
 
 .about-trust-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem;
-  box-shadow: var(--shadow-sm);
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 22px;
+  padding: 26px 22px;
+  box-shadow: 0 10px 30px -6px rgba(15, 23, 42, 0.08);
+  transition: var(--transition);
+}
+
+.about-trust-card:hover {
+  box-shadow: 0 16px 40px -8px rgba(15, 23, 42, 0.12);
+  border-color: rgba(255, 85, 0, 0.35);
 }
 
 .about-section-heading {
@@ -2274,49 +2311,88 @@ select.wp-form-select-light {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .about-spec-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 12px;
-  background: var(--bg-subtle);
-  border-radius: var(--radius-sm);
-  font-size: 0.88rem;
+  padding: 10px 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.about-spec-row:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
 }
 
 .about-spec-row span {
   color: var(--text-muted);
+  font-weight: 600;
 }
 
 .about-spec-row strong {
   color: var(--text-main);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .about-trust-actions {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 /* Harita ve İletişim Detay Kutuları */
 .map-embed-box {
   background: #ffffff;
-  border-radius: var(--radius-lg);
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-light);
+  box-shadow: 0 10px 30px -6px rgba(15, 23, 42, 0.08);
+  border: 1.5px solid #cbd5e1;
 }
 
 .contact-details-box {
   background: #ffffff;
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg);
+  border: 1.5px solid #cbd5e1;
+  border-radius: 20px;
   padding: 28px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 30px -6px rgba(15, 23, 42, 0.08);
+}
+
+.section-dark .contact-details-box {
+  background: #0f172a !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.5) !important;
+}
+
+.section-dark .contact-details-box h2,
+.section-dark .contact-details-box h3 {
+  color: #ffffff !important;
+}
+
+.section-dark .contact-item-row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.section-dark .contact-item-title {
+  color: #94a3b8 !important;
+}
+
+.section-dark .contact-item-value {
+  color: #f8fafc !important;
+}
+
+.section-dark .contact-item-value a {
+  color: #f8fafc !important;
+}
+
+.section-dark .contact-item-value a:hover {
+  color: var(--primary) !important;
 }
 
 @media (max-width: 600px) {
@@ -2359,7 +2435,7 @@ select.wp-form-select-light {
 }
 
 .contact-item-value {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: var(--text-main);
 }
@@ -2371,6 +2447,45 @@ select.wp-form-select-light {
 
 .contact-item-value a:hover {
   color: var(--primary);
+}
+
+/* WhatsApp Teklif Formu Elemanları (wp-form-select, wp-form-input) */
+.wp-form-select,
+.wp-form-select-light,
+.wp-form-input {
+  width: 100% !important;
+  padding: 11px 14px !important;
+  border-radius: 10px !important;
+  border: 1.5px solid #cbd5e1 !important;
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  font-family: inherit !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  outline: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
+  box-sizing: border-box !important;
+  display: block !important;
+}
+
+.wp-form-select,
+.wp-form-select-light {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23475569'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  background-size: 1rem !important;
+  padding-right: 36px !important;
+  cursor: pointer !important;
+}
+
+.wp-form-select:focus,
+.wp-form-select-light:focus,
+.wp-form-input:focus {
+  border-color: #ff5500 !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(255, 85, 0, 0.16) !important;
 }
 
 .form-row-2col {
@@ -3086,7 +3201,8 @@ select.wp-form-select-light {
 .mobile-sticky-bar .btn-call,
 .mobile-sticky-dock .sticky-call-btn,
 .sticky-btn-call {
-  background: var(--emerald-gradient) !important;
+  background: var(--primary-gradient) !important;
+  box-shadow: 0 4px 14px rgba(255, 85, 0, 0.4) !important;
 }
 
 .mobile-sticky-bar .btn-call:active,
@@ -3099,6 +3215,7 @@ select.wp-form-select-light {
 .mobile-sticky-dock .sticky-whatsapp-btn,
 .sticky-btn-whatsapp {
   background: var(--whatsapp-gradient) !important;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35) !important;
 }
 
 .mobile-sticky-bar .btn-whatsapp:active,
