@@ -35,28 +35,275 @@
   [headers.values]
     Cache-Control = "public, max-age=604800, must-revalidate"
 
+# Canonical 301 Redirects for Duplicate / Root Service URLs
 [[redirects]]
   from = "/oto-cekici"
   to = "/hizmetler/oto-cekici.html"
-  status = 200
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/oto-cekici.html"
   to = "/hizmetler/oto-cekici.html"
-  status = 200
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cekici"
+  to = "/hizmetler/oto-cekici.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cekici.html"
+  to = "/hizmetler/oto-cekici.html"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/cekici-arac-tasima"
   to = "/hizmetler/oto-cekici.html"
-  status = 200
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cekici-arac-tasima.html"
+  to = "/hizmetler/oto-cekici.html"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/oto-kurtarma"
   to = "/hizmetler/oto-kurtarma.html"
-  status = 200
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/oto-kurtarma.html"
   to = "/hizmetler/oto-kurtarma.html"
-  status = 200
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kurtarma"
+  to = "/hizmetler/oto-kurtarma.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kurtarma.html"
+  to = "/hizmetler/oto-kurtarma.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/acil-oto-kurtarma.html"
+  to = "/hizmetler/oto-kurtarma.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/yol-yardim-aku-takviye"
+  to = "/hizmetler/yol-yardim-aku-takviye.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/yol-yardim-aku-takviye.html"
+  to = "/hizmetler/yol-yardim-aku-takviye.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/aku-takviye"
+  to = "/hizmetler/yol-yardim-aku-takviye.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/aku-takviye.html"
+  to = "/hizmetler/yol-yardim-aku-takviye.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/aku-yol-yardim.html"
+  to = "/hizmetler/yol-yardim-aku-takviye.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lastik-tamir-degisim"
+  to = "/hizmetler/lastik-tamir-degisim.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lastik-tamir-degisim.html"
+  to = "/hizmetler/lastik-tamir-degisim.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lastik-tamir"
+  to = "/hizmetler/lastik-tamir-degisim.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lastik-tamir.html"
+  to = "/hizmetler/lastik-tamir-degisim.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lastik-yol-yardim.html"
+  to = "/hizmetler/lastik-tamir-degisim.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ariza-yol-yardim"
+  to = "/hizmetler/ariza-yol-yardim.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ariza-yol-yardim.html"
+  to = "/hizmetler/ariza-yol-yardim.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/yol-yardim"
+  to = "/hizmetler/ariza-yol-yardim.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/yol-yardim.html"
+  to = "/hizmetler/ariza-yol-yardim.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/oto-ariza.html"
+  to = "/hizmetler/ariza-yol-yardim.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/motosiklet-cekici"
+  to = "/hizmetler/motosiklet-cekici.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/motosiklet-cekici.html"
+  to = "/hizmetler/motosiklet-cekici.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/motor-cekici.html"
+  to = "/hizmetler/motosiklet-cekici.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tekne-karavan-cekici"
+  to = "/hizmetler/tekne-karavan-cekici.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tekne-karavan-cekici.html"
+  to = "/hizmetler/tekne-karavan-cekici.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tekne-cekici.html"
+  to = "/hizmetler/tekne-karavan-cekici.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/karavan-cekici.html"
+  to = "/hizmetler/tekne-karavan-cekici.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/agir-vasita-kurtarma"
+  to = "/hizmetler/agir-vasita-kurtarma.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/agir-vasita-kurtarma.html"
+  to = "/hizmetler/agir-vasita-kurtarma.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ticari-cekici.html"
+  to = "/hizmetler/agir-vasita-kurtarma.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/minibus-cekici.html"
+  to = "/hizmetler/agir-vasita-kurtarma.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sehirlerarasi-arac-tasima"
+  to = "/hizmetler/sehirlerarasi-arac-tasima.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sehirlerarasi-arac-tasima.html"
+  to = "/hizmetler/sehirlerarasi-arac-tasima.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sehirlerarasi-cekici.html"
+  to = "/hizmetler/sehirlerarasi-arac-tasima.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/arac-tasima.html"
+  to = "/hizmetler/sehirlerarasi-arac-tasima.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kaza-kurtarma-vinc"
+  to = "/hizmetler/kaza-kurtarma-vinc.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kaza-kurtarma-vinc.html"
+  to = "/hizmetler/kaza-kurtarma-vinc.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kaza-cekici.html"
+  to = "/hizmetler/kaza-kurtarma-vinc.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/vinc-kurtarma.html"
+  to = "/hizmetler/kaza-kurtarma-vinc.html"
+  status = 301
+  force = true
+
 
