@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Zemin Radyal Gradyanı -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#152033"/>
+      <stop offset="70%" stop-color="#0a101d"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </radialGradient>
+
+    <!-- Turuncu Marka Gradyanı -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7a00"/>
+      <stop offset="100%" stop-color="#ee3800"/>
+    </linearGradient>
+
+    <!-- Metalik Krom Halka -->
+    <linearGradient id="chromeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#64748b"/>
+      <stop offset="70%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+
+    <!-- Sarı İkaz Işığı -->
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+
+    <!-- Yumuşak Işık Efekti -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- 1. Ana Dairesel Zemin -->
+  <circle cx="256" cy="256" r="248" fill="url(#bgGrad)"/>
+
+  <!-- 2. Dış Metalik Krom Çerçeve Halkası -->
+  <circle cx="256" cy="256" r="244" fill="none" stroke="url(#chromeGrad)" stroke-width="6" opacity="0.85"/>
+
+  <!-- 3. İç Vurgulu Neon Turuncu Halka -->
+  <circle cx="256" cy="256" r="230" fill="none" stroke="url(#primaryGrad)" stroke-width="7" filter="url(#glow)"/>
+  <circle cx="256" cy="256" r="218" fill="none" stroke="#ff6b00" stroke-width="2" stroke-dasharray="8 6" opacity="0.4"/>
+
+  <!-- 4. Arka Plan Yol Şeridi -->
+  <path d="M 85 365 Q 256 392 427 365 L 442 410 Q 256 442 70 410 Z" fill="#1e293b" opacity="0.95"/>
+  <!-- Yol Orta Sarı Şeridi -->
+  <polygon points="251,372 261,372 265,418 247,418" fill="#fbbf24" opacity="0.9"/>
+
+  <!-- 5. Çekici Platformu & Şasi (Koyu Titanyum Gri) -->
+  <rect x="180" y="325" width="225" height="18" rx="4" fill="#334155"/>
+  <rect x="235" y="315" width="165" height="12" rx="3" fill="#475569"/>
+
+  <!-- 6. Hidrolik Vinç / Kurtarma Kolu -->
+  <line x1="260" y1="325" x2="385" y2="208" stroke="url(#primaryGrad)" stroke-width="18" stroke-linecap="round"/>
+  <line x1="280" y1="325" x2="340" y2="255" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round"/>
+  <!-- Makara Noktası -->
+  <circle cx="385" cy="208" r="14" fill="#0f172a" stroke="#cbd5e1" stroke-width="4"/>
+  <!-- Çelik Halat -->
+  <line x1="385" y1="222" x2="385" y2="265" stroke="#f1f5f9" stroke-width="4"/>
+  <!-- Çekici Kancası (Hook) -->
+  <path d="M 385 265 C 385 285, 360 285, 360 270 C 360 262, 368 258, 372 262" fill="none" stroke="#f8fafc" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- 7. Çekici Kabini (Canlı Turuncu) -->
+  <path d="M 115 342 L 115 285 C 115 272, 125 262, 138 262 L 180 262 C 190 262, 205 275, 215 290 L 235 290 C 242 290, 246 295, 246 302 L 246 342 Z" fill="url(#primaryGrad)"/>
+
+  <!-- Camlar -->
+  <path d="M 142 270 L 175 270 C 182 270, 192 280, 200 292 L 142 292 C 137 292, 134 288, 134 282 L 134 278 C 134 273, 138 270, 142 270 Z" fill="#0b111e"/>
+  <polygon points="144,272 165,272 152,290 138,290" fill="#38bdf8" opacity="0.4"/>
+
+  <!-- Kapı Çizgisi -->
+  <line x1="178" y1="292" x2="178" y2="340" stroke="#c23100" stroke-width="3"/>
+
+  <!-- Ön Far & Izgara -->
+  <rect x="106" y="322" width="12" height="16" rx="3" fill="#334155"/>
+  <rect x="108" y="325" width="8" height="10" rx="2" fill="#ffffff" filter="url(#glow)"/>
+  <rect x="110" y="338" width="25" height="6" rx="2" fill="#0f172a"/>
+
+  <!-- 8. Tepe Sarı İkaz Lambası (Beacon Lightbar) -->
+  <rect x="145" y="250" width="45" height="9" rx="4" fill="url(#amberGrad)" filter="url(#glow)"/>
+  <rect x="150" y="252" width="15" height="5" rx="2" fill="#ffffff" opacity="0.9"/>
+
+  <!-- 9. Tekerlekler (Ağır Vasıta Kauçuk & Jant) -->
+  <!-- Ön Tekerlek -->
+  <g transform="translate(155, 345)">
+    <circle cx="0" cy="0" r="28" fill="#0b0f19" stroke="#334155" stroke-width="4"/>
+    <circle cx="0" cy="0" r="16" fill="#64748b"/>
+    <circle cx="0" cy="0" r="8" fill="url(#primaryGrad)"/>
+    <circle cx="0" cy="0" r="3" fill="#ffffff"/>
+  </g>
+
+  <!-- Arka Çift Tekerlek -->
+  <g transform="translate(305, 345)">
+    <circle cx="0" cy="0" r="28" fill="#0b0f19" stroke="#334155" stroke-width="4"/>
+    <circle cx="0" cy="0" r="16" fill="#64748b"/>
+    <circle cx="0" cy="0" r="8" fill="url(#primaryGrad)"/>
+    <circle cx="0" cy="0" r="3" fill="#ffffff"/>
+  </g>
+  <g transform="translate(365, 345)">
+    <circle cx="0" cy="0" r="28" fill="#0b0f19" stroke="#334155" stroke-width="4"/>
+    <circle cx="0" cy="0" r="16" fill="#64748b"/>
+    <circle cx="0" cy="0" r="8" fill="url(#primaryGrad)"/>
+    <circle cx="0" cy="0" r="3" fill="#ffffff"/>
+  </g>
+
+  <!-- 10. Üst Rozet Vurgusu: 7/24 Yıldız -->
+  <g transform="translate(256, 120)">
+    <path d="M 0 -22 L 6 -6 L 22 0 L 6 6 L 0 22 L -6 6 L -22 0 L -6 -6 Z" fill="url(#primaryGrad)"/>
+    <circle cx="0" cy="0" r="5" fill="#ffffff"/>
+  </g>
+</svg>

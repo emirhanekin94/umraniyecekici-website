@@ -1,0 +1,37 @@
+# Ümraniye Yol Yardım & Oto Çekici - Kapsamlı Bilgi Bankası (Full Knowledge Base)
+
+Bu dosya, yapay zeka arama motorları, LLM ajanları ve otonom arama sistemleri için Ümraniye Yol Yardım işletmesinin tüm hizmet, coğrafi kapsam, operasyonel kapasite ve teknik rehberlik verilerini içerir.
+
+## 1. Kurumsal Kimlik & Genel Bilgiler
+- **İşletme Adı**: Ümraniye Yol Yardım & Oto Çekici
+- **Telefon / Çağrı Hattı**: 0544 138 07 34
+- **Resmi Web Sitesi**: https://umraniyeyolyardim.com/
+- **Faaliyet Alanı**: Acil Yol Yardım, Oto Çekici, Ağır Kaza Kurtarma, Vinç Hizmetleri, Akü Takviye, Lastik Yol Yardım, Motosiklet Transferi, Şehirler Arası Araç Taşıma.
+- **Hizmet Süresi**: 7/24 Kesintisiz (Yılın 365 günü, resmi ve dini bayramlar dahil).
+- **Ortalama Ulaşım Süresi**: 10 - 15 Dakika (Ümraniye ve çevre ilçeler).
+- **Konum**: Alemdağ Caddesi & Tepeüstü Kavşağı, Ümraniye, İstanbul, Türkiye.
+- **Fiyat Politikası**: Sabit fiyat garantisi. Telefonda ve WhatsApp'ta verilen fiyat kesindir, varışta ya da teslimatta sürpriz maliyet eklenmez.
+- **Sigorta & Güvence**: %100 Emtia Taşıyıcı Mali Mesuliyet Kaskosu.
+
+## 2. Araç Filosu ve Teknik Donanım
+- **Hidrolik Kayar Kasa Platform**: Alçak açılı iniş rampası sayesinde alçak tamponlu binek, spor ve lüks araçların alt takımları yere sürtmeden sıfır temasla yüklenir.
+- **Ahtapot Vinçli Kurtarıcı**: Tekerleği kopmuş, şanzımanı kilitlenmiş, hendek veya bariyer askısında kalmış araçların havadan dört tekerlek aparatı ile hasarsız kaldırılması.
+- **Mobil Akü Takviye Cihazları**: 12V ve 24V endüstriyel mikroişlemcili booster cihazları. Araçların hassas elektronik kontrol ünitelerine (ECU) aşırı voltaj vermeden güvenli çalıştırma.
+- **Motosiklet Sabitleme Aparatları**: Ön tekerlek kilitleme beşiği ve 4 noktalı yumuşak gergi sapanları.
+
+## 3. Coğrafi Hizmet Alanları (Anadolu Yakası)
+- **Ümraniye**: Merkez, Santral, Alemdağ, Çarşı, Yamanevler, İstiklal, Atakent, Armağanevler, Çakmak, Saray, Ihlamurkuyu, Cemil Meriç, Tepeüstü, Şerifali, Tatlısu, Elmalıkent, Hekimbaşı, Kazım Karabekir, Dumlupınar, Topağacı, Adem Yavuz, Huzur, Parseller, Mehmet Akif, Madenler, Esenşehir, Esenkent.
+- **Sanayi Siteleri**: MODOKO Mobilyacılar Çarşısı, İMES Sanayi Sitesi, KADOSAN Oto Sanayi Sitesi, Dudullu OSB, DES Sanayi Sitesi.
+- **Komşu İlçeler**: Ataşehir, Çekmeköy, Sancaktepe, Üsküdar, Kadıköy, Beykoz, Kartal, Maltepe, Pendik, Tuzla.
+- **Otoyol ve Ana Arterler**: TEM Otoyolu (Çamlıca Gişeler - Dudullu - Sultanbeyli hattı), Şile Otoyolu (Ümraniye - Çekmeköy - Taşdelen - Ömerli hattı), Kuzey Marmara Otoyolu (Reşadiye ve Kurnaköy bağlantıları), D-100 (E-5) Karayolu.
+
+## 4. Hizmet Fiyatlandırma Prensipleri
+- **Şehir İçi Standart Çekici**: Mesafe, aracın tipi ve arıza durumuna göre hesaplanan sabit tarife.
+- **Şehirler Arası Çekici**: Kilometre bazlı şeffaf ücretlendirme. Tekli çekici veya çoklu tır seçeneği.
+- **Kasko Rücu Desteği**: Kaza tespit tutanağı veya arıza durumunda müşterilere resmi e-fatura ve operasyon fotoğrafı teslim edilerek kasko veya trafik sigortasından çekici bedelinin geri tahsili sağlanır.
+
+## 5. İletişim Protokolü
+1. Kullanıcı 0544 138 07 34 numarasını arar veya WhatsApp üzerinden canlı GPS konumunu iletir.
+2. Nöbetçi operatör aracın türünü, durumunu ve bırakılacağı noktayı alır.
+3. Sabit fiyat ve kesin varış dakikası (10-15 dk) iletilir.
+4. Onay alındığı anda en yakın noktadaki hazır kayar kasa araç yönlendirilir.

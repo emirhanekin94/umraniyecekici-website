@@ -46,6 +46,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 1.1 Mobil Hero Teklif Formu Aç/Kapat (Fotoğrafın Kapanmasını Engeller)
+  const heroFormToggle = document.getElementById('hero-form-toggle');
+  const heroFormCard = document.getElementById('hero-form-card');
+  if (heroFormToggle && heroFormCard) {
+    heroFormToggle.addEventListener('click', () => {
+      // Sadece mobilde (veya form akordiyon modundayken) tetikle
+      if (window.innerWidth <= 768) {
+        const isOpen = heroFormCard.classList.toggle('open');
+        const toggleBtnText = heroFormCard.querySelector('.toggle-btn-text');
+        if (toggleBtnText) {
+          toggleBtnText.textContent = isOpen ? 'Formu Kapat' : 'Formu Aç';
+        }
+      }
+    });
+  }
+
   // 2. WhatsApp Yönlendirme Motoru (Safari / iOS / Android Tam Uyumlu)
   window.sendWhatsAppMessage = function(text) {
     const encodedText = encodeURIComponent(text);
